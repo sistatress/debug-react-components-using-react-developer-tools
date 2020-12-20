@@ -1,5 +1,7 @@
 import React, { useReducer } from "react";
 import CaracterCount from "./CaracterCount";
+import WordCount from "./WordCount";
+import CharacterMap from "./CharacterMap";
 
 const reducer = (state, action) => {
   return {
@@ -23,6 +25,8 @@ const TextInformation = () => {
       <button onClick={() => toggleTabs("wordCount")}>Word Count</button>
       <button onClick={() => toggleTabs("characterMap")}>Character Map</button>
       <CaracterCount show={tabs.characterCount} />
+      <WordCount show={tabs.wordCount} />
+      <CharacterMap show={tabs.characterMap} />
     </div>
   );
 };
